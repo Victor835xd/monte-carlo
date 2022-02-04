@@ -1,0 +1,54 @@
+import random
+
+
+aciertos = 0
+errores = 0
+for i in range(1000):
+    coordenadas = [random.uniform(-1,1)]
+    coordenadas.append(random.uniform(-1,1))
+    x, y = coordenadas
+    print(f"Las cordenadas son: {coordenadas}")
+    if ((x**2 + y**2) <= 1):
+        aciertos += 1
+    else:
+        errores += 1
+
+print(f"Los aciertos son: {aciertos} ")
+print(f"Los errores son: {errores}")
+print("Después divide el numero de puntos que entraron en el circulo entre el numero total de puntos generados.")
+print(aciertos/1000)
+print("Finalmente, multiplica tu resultado por 4.")
+print((aciertos/1000)*4)from email.policy import strict
+
+#import random
+
+
+p1 = ''
+p2 = ''
+p3 = ''
+Stick = 0
+Move = 0
+for i in range(100):
+    puerta1 = random.randint(0, 1)
+    puerta2 = random.randint(0, 1)
+    puerta3 = random.randint(0, 1)
+    if(puerta1 == 1):
+        p1 = '$1,000,000'
+        p2 = 'Cabra'
+        p3 = 'Cabra'
+    else:
+        p1 = 'Cabra'
+    if(puerta2 == 1):
+            p2 = '$1,000,000'
+            p3 = 'Cabra'
+    else:
+            p2 = 'Cabra'
+            p3 = '$1,000,000'
+    #No mostrar las puertas       
+    #print(f"Puerta 1: '{p1}' Puerta2: '{p2}' Puerta 3: '{p3}' ")
+    if(p1 == '$1,000,000'):
+        Stick += 1
+    else:
+        Move += 1
+print(f"Resultados al quedarte con la puerta: {Stick} Resultados al cambiar de puerta: {Move}")
+       
